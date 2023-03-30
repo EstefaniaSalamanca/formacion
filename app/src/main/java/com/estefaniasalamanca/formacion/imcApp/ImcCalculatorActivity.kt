@@ -1,4 +1,4 @@
-package com.estefaniasalamanca.formacion.IMCApp
+package com.estefaniasalamanca.formacion.imcApp
 
 import android.content.Intent
 import android.os.Bundle
@@ -94,16 +94,16 @@ class ImcCalculatorActivity : AppCompatActivity() {
     }
 
     private fun navigateToResult(result: Double) {
-        val intent = Intent(this, ResultIMCActivity::class.java)
+        val intent = Intent(this, ResulttoIMCActivity::class.java)
         intent.putExtra(IMC_KEY, result)
         startActivity(intent)
 
     }
 
     private fun calculateIMC(): Double {
-        val df = DecimalFormat("#.##")
         val imc = currentWeight / (currentHeight.toDouble() / 100 * currentHeight.toDouble() / 100)
-        return df.format(imc).toDouble()
+        val imcRedondeado = Math.round(imc * 100/100.0)
+        return imcRedondeado.toDouble()
     }
 
     private fun setWeight() {

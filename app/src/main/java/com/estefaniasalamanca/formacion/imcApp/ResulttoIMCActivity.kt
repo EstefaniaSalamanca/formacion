@@ -1,15 +1,13 @@
-package com.estefaniasalamanca.formacion.IMCApp
+package com.estefaniasalamanca.formacion.imcApp
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.estefaniasalamanca.formacion.IMCApp.ImcCalculatorActivity.Companion.IMC_KEY
 import com.estefaniasalamanca.formacion.R
 
-class ResultIMCActivity : AppCompatActivity() {
-
+class ResulttoIMCActivity : AppCompatActivity() {
     private lateinit var tvResult: TextView
     private lateinit var tvIMC: TextView
     private lateinit var tvDescription: TextView
@@ -17,8 +15,8 @@ class ResultIMCActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_result_imcactivity)
-        val result:Double = intent.extras?.getDouble(IMC_KEY) ?: -1.0
+        setContentView(R.layout.activity_resultto_imcactivity)
+        val result:Double = intent.extras?.getDouble(ImcCalculatorActivity.IMC_KEY) ?: -1.0
         initComponents()
         initUI(result)
         initListeners()
@@ -42,7 +40,7 @@ class ResultIMCActivity : AppCompatActivity() {
             }
             in 24.99..29.99 -> {
                 tvResult.text = getString(R.string.title_sobrepeso)
-                tvResult.setTextColor(ContextCompat.getColor(this, R.color.sobrepeso))
+                tvResult.setTextColor(ContextCompat.getColor(this, R.color.peso_sobrepeso))
                 tvDescription.text = getString(R.string.description_sobrepeso)
             }
             in 30.00..99.00 ->{
