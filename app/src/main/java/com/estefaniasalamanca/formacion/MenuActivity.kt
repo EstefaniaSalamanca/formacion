@@ -1,11 +1,12 @@
 package com.estefaniasalamanca.formacion
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import com.estefaniasalamanca.formacion.FirstApp.FirstAppActivity
-import android.content.Intent
 import com.estefaniasalamanca.formacion.IMCApp.ImcCalculatorActivity
+import com.estefaniasalamanca.formacion.ToDoApp.ToDoActivity
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,8 +17,18 @@ class MenuActivity : AppCompatActivity() {
         btnSaludApp.setOnClickListener { navigateToSaludApp() }
         val btnIMCApp = findViewById<Button>(R.id.btnIMCApp)
         btnIMCApp.setOnClickListener { navigateToIMCApp() }
+        val btnToDoApp = findViewById<Button>(R.id.btnToDoApp)
+        btnToDoApp.setOnClickListener { navigateToToDoApp() }
+
     }
-     private fun navigateToSaludApp(){
+
+    private fun navigateToToDoApp() {
+        val intent = Intent(this, ToDoActivity::class.java)
+        startActivity(intent)
+
+    }
+
+    private fun navigateToSaludApp(){
          val intent = Intent(this, FirstAppActivity::class.java)
          startActivity(intent)
      }
