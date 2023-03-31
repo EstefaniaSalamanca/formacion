@@ -6,7 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.estefaniasalamanca.formacion.FirstApp.FirstAppActivity
 import com.estefaniasalamanca.formacion.imcApp.ImcCalculatorActivity
-import com.estefaniasalamanca.formacion.todoapp.todoActivity
+import com.estefaniasalamanca.formacion.todoapp.TodoActivity
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +23,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun navigateToToDoApp() {
-        val intent = Intent(this, todoActivity::class.java)
+        val intent = Intent(this, TodoActivity::class.java)
         startActivity(intent)
 
     }

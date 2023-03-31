@@ -15,7 +15,7 @@
             android:name=".imcApp.ResulttoIMCActivity"
             android:exported="false" />
         <activity
-            android:name=".todoapp.todoActivity"
+            android:name=".todoapp.TodoActivity"
             android:exported="false" />
 
         <activity
