@@ -16,6 +16,7 @@
             android:exported="false" />
         <activity
             android:name=".todoapp.TodoActivity"
+            android:theme="@style/Theme.ToDoApp"
             android:exported="false" />
 
         <activity

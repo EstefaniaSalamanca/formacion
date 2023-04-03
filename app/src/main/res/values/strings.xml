@@ -26,7 +26,13 @@
     //todo App
 
     <string name="todo_tittle">Bienvenido, Aris</string>
-    <string name="todo_categorias">Categorías</string>
+    <string name="todo_categories">Categorías</string>
+    <string name="todo_tasks">Tareas</string>
+    <string name="todo_dialog_add_task">Añade una tarea</string>
+    <string name="todo_dialog_business">Negocio</string>
+    <string name="todo_dialog_personal">Personal</string>
+    <string name="todo_dialog_others">Otros</string>
+    <string name="Todo_dialog_add_task_button">Crear tarea</string>
 
 
 </resources>
