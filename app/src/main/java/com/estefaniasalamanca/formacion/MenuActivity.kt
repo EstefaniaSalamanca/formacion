@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.estefaniasalamanca.formacion.FirstApp.FirstAppActivity
 import com.estefaniasalamanca.formacion.imcApp.ImcCalculatorActivity
+import com.estefaniasalamanca.formacion.settings.SettingsActivity
 import com.estefaniasalamanca.formacion.superheroapp.SuperHeroListActivity
 import com.estefaniasalamanca.formacion.todoapp.TodoActivity
 
@@ -22,6 +23,8 @@ class MenuActivity : AppCompatActivity() {
         btnToDoApp.setOnClickListener { navigateToToDoApp() }
         val btnSuperHeroApp = findViewById<Button>(R.id.btnSuperHeroApp)
         btnSuperHeroApp.setOnClickListener { navigateToSuperHeroApp() }
+        val btnSettings = findViewById<Button>(R.id.btnSettings)
+        btnSettings.setOnClickListener { navigateToSettings() }
 
     }
 
@@ -42,6 +45,11 @@ class MenuActivity : AppCompatActivity() {
     }
     private fun navigateToSuperHeroApp(){
         val intent = Intent(this, SuperHeroListActivity::class.java)
+        startActivity(intent)
+
+    }
+    private fun navigateToSettings(){
+        val intent = Intent(this, SettingsActivity::class.java)
         startActivity(intent)
 
     }
